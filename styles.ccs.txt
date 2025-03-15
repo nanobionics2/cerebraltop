@@ -1,0 +1,134 @@
+/* Estilo base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+header nav .cta {
+  background-color: #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+}
+.hero .cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.course-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: calc(33% - 40px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.course-card a {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .courses {
+    flex-direction: column;
+    align-items: center;
+  }
+  .course-card {
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav a {
+    margin: 5px 0;
+  }
+  .hero h2 {
+    font-size: 18px;
+  }
+  .course-card {
+    width: 100%;
+  }
+}
+/* Estilo específico para a página da lista de cursos */
+.courses-list {
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courses-list h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.courses-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.courses-list li {
+  margin: 10px 0;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.courses-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.courses-list a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.courses-list a:hover {
+  text-decoration: underline;
+}
